@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/callFragment">
+
+    <fragment
+        android:id="@+id/newScheduleFragment"
+        android:name="com.tanvir.training.actioninputsbatch04.NewScheduleFragment"
+        android:label="fragment_new_schedule"
+        tools:layout="@layout/fragment_new_schedule" >
+        <action
+            android:id="@+id/action_newScheduleFragment_to_schedulListFragment"
+            app:destination="@id/schedulListFragment"
+            app:popUpTo="@id/schedulListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/schedulListFragment"
+        android:name="com.tanvir.training.actioninputsbatch04.ScheduleListFragment"
+        android:label="fragment_schedul_list"
+        tools:layout="@layout/fragment_schedule_list" >
+        <action
+            android:id="@+id/action_schedulListFragment_to_newScheduleFragment"
+            app:destination="@id/newScheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callFragment"
+        android:name="com.tanvir.training.actioninputsbatch04.CallFragment"
+        android:label="fragment_call"
+        tools:layout="@layout/fragment_call" />
+</navigation>
